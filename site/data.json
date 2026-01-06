@@ -1,0 +1,25 @@
+{
+  "skills": [
+    {"name": "Power BI", "level": 90},
+    {"name": "Excel Avançado", "level": 85},
+    {"name": "Figma", "level": 80},
+    {"name": "Desenvolvimento Web", "level": 75}
+  ],
+  "projects": [
+    {
+      "title": "Dashboard de Vendas",
+      "description": "Dashboard interativo mostrando vendas por região e produto.",
+      "category": "Dados"
+    },
+    {
+      "title": "App Web",
+      "description": "Aplicativo web simples para gerenciamento de tarefas.",
+      "category": "Desenvolvimento"
+    },
+    {
+      "title": "Design UI/UX",
+      "description": "Criação de protótipos e interfaces atraentes.",
+      "category": "Design"
+    }
+  ]
+}

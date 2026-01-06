@@ -1,0 +1,228 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ================= BODY ================= */
+body {
+    background: linear-gradient(135deg, #f8e0f0, #f1c0dc); /* Degradê rosa escuro suave */
+    color: #333;
+    scroll-behavior: smooth;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* ================= PARTÍCULAS ================= */
+#particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* ================= HEADER ================= */
+header {
+    background-color: #e60073; /* Rosa vibrante escuro */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffd6e6; /* rosa claro para hover */
+}
+
+/* ================= SEÇÕES ================= */
+section {
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 1000px;
+    margin: auto;
+}
+
+section h2 {
+    margin-bottom: 40px;
+    color: #c0005a; /* Rosa escuro profissional */
+    position: relative;
+    font-size: 2em;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
+
+section h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #e60073; /* Rosa vibrante escurecido */
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* ================= SOBRE MIM ================= */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.profile-photo {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 4px solid #e60073;
+}
+
+/* ================= HABILIDADES ================= */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: 220px;
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.skill-name {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.skill-bar {
+    background-color: #f1c0dc;
+    border-radius: 10px;
+    height: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-level {
+    background-color: #e60073; /* barra de skill escura */
+    height: 100%;
+    width: 0;
+    border-radius: 10px;
+}
+
+/* ================= PROJETOS ================= */
+.projects {
+    padding: 40px;
+    background-color: #FFF;
+}
+
+.project-card {
+    border: 2px solid #F8BBD0;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.project-card h3 {
+    color: #E91E63;
+}
+
+
+/* ================= MODAL ================= */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    animation: fadeInScale 0.4s forwards;
+}
+
+#close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background-color: #e60073; /* footer escuro */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+/* ================= RESPONSIVO ================= */
+@media (max-width: 700px) {
+    .about-content {
+        flex-direction: column;
+    }
+    .skills-container, .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* ================= ANIMAÇÕES ================= */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.8);}
+    to { opacity: 1; transform: scale(1);}
+}
