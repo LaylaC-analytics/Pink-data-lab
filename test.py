@@ -1,1 +1,1 @@
-print("VS Code funcionando 💗🚀")
+print("VS Code funcionando 💗")
