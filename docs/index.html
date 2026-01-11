@@ -1,80 +1,138 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DataPink - Portfólio Profissional</title>
-    <!-- Fonte moderna -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pink Data Lab | Data Analytics Portfolio</title>
+
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- ===== PARTÍCULAS DE FUNDO ===== -->
-    <canvas id="particles"></canvas>
 
-    <!-- ===== HEADER ===== -->
-   <h3>
-    <a href="https://github.com/LaylaC-analytics/pink-data-lab" target="_blank">
-        Pink Data Lab – Sales Analysis
-    </a>
-</h3>
+<!-- ================= PARTICLES BACKGROUND ================= -->
+<canvas id="particles"></canvas>
 
+<!-- ================= LOGIN ================= -->
+<div id="login-screen">
+  <form class="login-box" onsubmit="login(); return false;">
+    <h2>Welcome</h2>
+    <p>Enter to explore my data portfolio</p>
 
-    <!-- ===== SOBRE MIM ===== -->
-    <section id="about">
-        <h2>Sobre Mim</h2>
-        <div class="about-content">
-            <img src="" alt="Minha Foto" class="profile-photo">
-            <p>Sou apaixonada por dados, design e desenvolvimento. Aqui você encontra meu portfólio profissional, com projetos e habilidades que desenvolvi até hoje.</p>
-        </div>
-    </section>
+    <input type="text" id="username" placeholder="Your name" />
+    <input type="password" value="123@" readonly />
 
-    <!-- ===== HABILIDADES ===== -->
-    <section id="skills">
-        <h2>Habilidades</h2>
-        <div class="skills-container">
-            <!-- Skills carregadas via JS -->
-        </div>
-    </section>
+    <button type="submit">Enter</button>
+  </form>
+</div>
 
-    <!-- ===== PROJETOS ===== -->
-   <section class="projects">
-    <h2>Projects</h2>
+<!-- ================= SITE CONTENT ================= -->
+<div id="site-content" style="display:none;">
+
+  <!-- ================= HEADER ================= -->
+  <header>
+    <h1>Pink Data Lab</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="https://github.com/LaylaC-analytics" target="_blank">GitHub</a>
+    </nav>
+  </header>
+
+  <!-- ================= ABOUT ================= -->
+  <section id="about">
+    <h2>About Me</h2>
+
+    <div class="about-content">
+      <img src="" alt="Profile photo" class="profile-photo" />
+
+      <p>
+        I am a data-focused professional driven by curiosity, creativity, and
+        analytical thinking. I believe data is not just about numbers, but
+        about stories, decisions, and real-world impact.
+        <br /><br />
+        The pink visual identity of this website is intentional. It represents
+        confidence, authenticity, and the courage to bring creativity into
+        technical environments.
+        <br /><br />
+        My goal is to grow as a Data Analyst, transforming complex datasets
+        into clear, actionable insights using Python, SQL, and data
+        visualization.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= SKILLS ================= -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-container"></div>
+  </section>
+
+  <!-- ================= PROJECTS ================= -->
+  <section id="projects">
+    <h2>Data Projects</h2>
 
     <div class="project-card">
-        <h3>Pink Data Lab – Sales Analysis</h3>
-        <p>
-            Exploratory data analysis of sales data using Python (pandas, numpy, matplotlib)
-            to identify trends, patterns, and business insights.
-        </p>
-        <p><strong>Tools:</strong> Python, Pandas, Matplotlib</p>
+      <h3>Pink Data Insights</h3>
+
+      <p>
+        End-to-end data analysis project focused on sales data.  
+        The project includes exploratory data analysis, feature engineering,
+        SQL analysis with SQLite, and business-driven insights.
+      </p>
+
+      <p>
+        <strong>Technologies:</strong>
+        Python, Pandas, SQL, SQLite, Matplotlib
+      </p>
+
+      <a
+        href="https://github.com/LaylaC-analytics/pink-data-insights"
+        target="_blank"
+        class="project-link"
+      >
+        View project on GitHub →
+      </a>
     </div>
-</section>
+  </section>
 
+  <!-- ================= CONTACT ================= -->
+  <section id="contact">
+    <h2>Contact</h2>
 
-    <!-- ===== MODAL DE PROJETO ===== -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span id="close-modal">&times;</span>
-            <h3 id="modal-title"></h3>
-            <p id="modal-category"></p>
-            <p id="modal-description"></p>
-        </div>
-    </div>
+    <p>
+      Email:
+      <a href="mailto:laylacos21@gmail.com">laylacos21@gmail.com</a>
+    </p>
 
-    <!-- ===== CONTATO ===== -->
-    <section id="contact">
-        <h2>Contato</h2>
-        <p>Email: seuemail@email.com</p>
-        <p>LinkedIn: linkedin.com/in/seunome</p>
-    </section>
+    <p>
+      LinkedIn:
+      <a
+        href="https://www.linkedin.com/in/layla-costa-054b54231/"
+        target="_blank"
+      >
+        linkedin.com/in/layla-costa
+      </a>
+    </p>
+  </section>
 
-    <!-- ===== FOOTER ===== -->
-    <footer>
-        <p>© 2026 DataPink - Todos os direitos reservados</p>
-    </footer>
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <p>© 2026 Pink Data Lab. All rights reserved.</p>
+  </footer>
 
-    <!-- ===== SCRIPT ===== -->
-    <script src="script.js"></script>
+</div>
+
+<!-- ================= SCRIPT ================= -->
+<script src="script.js"></script>
+
 </body>
 </html>

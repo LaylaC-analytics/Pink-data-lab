@@ -1,228 +1,228 @@
 /* ================= RESET ================= */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 /* ================= BODY ================= */
 body {
-    background: linear-gradient(135deg, #f8e0f0, #f1c0dc); /* Degradê rosa escuro suave */
-    color: #333;
-    scroll-behavior: smooth;
-    position: relative;
-    min-height: 100vh;
+  background: linear-gradient(135deg, #f8e0f0, #f1c0dc);
+  color: #333;
+  min-height: 100vh;
+  scroll-behavior: smooth;
 }
 
-/* ================= PARTÍCULAS ================= */
+/* ================= PARTICLES ================= */
 #particles {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
 }
 
 /* ================= HEADER ================= */
 header {
-    background-color: #e60073; /* Rosa vibrante escuro */
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  background-color: #e60073;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 header h1 {
-    font-size: 2.5em;
+  font-size: 2.4rem;
 }
 
 nav {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: 600;
-    transition: 0.3s;
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.3s;
 }
 
 nav a:hover {
-    color: #ffd6e6; /* rosa claro para hover */
+  opacity: 0.8;
 }
 
-/* ================= SEÇÕES ================= */
+/* ================= SECTIONS ================= */
 section {
-    padding: 60px 20px;
-    text-align: center;
-    max-width: 1000px;
-    margin: auto;
+  max-width: 1000px;
+  margin: auto;
+  padding: 70px 20px;
+  text-align: center;
 }
 
 section h2 {
-    margin-bottom: 40px;
-    color: #c0005a; /* Rosa escuro profissional */
-    position: relative;
-    font-size: 2em;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 1s forwards;
+  color: #c0005a;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  position: relative;
 }
 
 section h2::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 4px;
-    background-color: #e60073; /* Rosa vibrante escurecido */
-    margin: 10px auto 0;
-    border-radius: 2px;
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: #e60073;
+  display: block;
+  margin: 12px auto 0;
+  border-radius: 2px;
 }
 
-/* ================= SOBRE MIM ================= */
+/* ================= ABOUT ================= */
 .about-content {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.about-content p {
+  max-width: 600px;
+  line-height: 1.7;
 }
 
 .profile-photo {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border: 4px solid #e60073;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #e60073;
+  object-fit: cover;
 }
 
-/* ================= HABILIDADES ================= */
+/* ================= SKILLS ================= */
 .skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .skill-card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    padding: 20px;
-    width: 220px;
-    transition: transform 0.5s, box-shadow 0.5s;
+  background: white;
+  padding: 20px;
+  width: 220px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
 }
 
 .skill-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+  transform: translateY(-6px);
 }
 
 .skill-name {
-    font-weight: 600;
-    margin-bottom: 15px;
+  font-weight: 600;
+  margin-bottom: 12px;
 }
 
 .skill-bar {
-    background-color: #f1c0dc;
-    border-radius: 10px;
-    height: 12px;
-    position: relative;
-    overflow: hidden;
+  background: #f1c0dc;
+  height: 10px;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .skill-level {
-    background-color: #e60073; /* barra de skill escura */
-    height: 100%;
-    width: 0;
-    border-radius: 10px;
+  height: 100%;
+  background: #e60073;
 }
 
-/* ================= PROJETOS ================= */
-.projects {
-    padding: 40px;
-    background-color: #FFF;
-}
-
+/* ================= PROJECTS ================= */
 .project-card {
-    border: 2px solid #F8BBD0;
-    border-radius: 12px;
-    padding: 20px;
-    margin-top: 20px;
+  background: white;
+  border-radius: 14px;
+  padding: 30px;
+  max-width: 700px;
+  margin: 0 auto;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
 }
 
 .project-card h3 {
-    color: #E91E63;
+  color: #e60073;
+  margin-bottom: 12px;
 }
 
-
-/* ================= MODAL ================= */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 2000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.6);
-    justify-content: center;
-    align-items: center;
+.project-link {
+  display: inline-block;
+  margin-top: 18px;
+  color: #e60073;
+  font-weight: 600;
+  text-decoration: none;
 }
 
-.modal-content {
-    background: white;
-    border-radius: 10px;
-    padding: 30px;
-    max-width: 500px;
-    width: 90%;
-    position: relative;
-    animation: fadeInScale 0.4s forwards;
+.project-link:hover {
+  text-decoration: underline;
 }
 
-#close-modal {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 25px;
-    cursor: pointer;
+/* ================= CONTACT ================= */
+#contact p {
+  margin: 10px 0;
 }
 
 /* ================= FOOTER ================= */
 footer {
-    background-color: #e60073; /* footer escuro */
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 50px;
+  background: #e60073;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
 }
 
-/* ================= RESPONSIVO ================= */
-@media (max-width: 700px) {
-    .about-content {
-        flex-direction: column;
-    }
-    .skills-container, .projects-container {
-        flex-direction: column;
-        align-items: center;
-    }
+/* ================= LOGIN ================= */
+#login-screen {
+  position: fixed;
+  inset: 0;
+  background: rgba(230, 0, 115, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5000;
 }
 
-/* ================= ANIMAÇÕES ================= */
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.login-box {
+  background: white;
+  padding: 40px;
+  border-radius: 14px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
-@keyframes fadeInScale {
-    from { opacity: 0; transform: scale(0.8);}
-    to { opacity: 1; transform: scale(1);}
+.login-box h2 {
+  color: #e60073;
+  margin-bottom: 10px;
+}
+
+.login-box input,
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  border-radius: 8px;
+}
+
+.login-box button {
+  background: #e60073;
+  color: white;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+  }
 }
