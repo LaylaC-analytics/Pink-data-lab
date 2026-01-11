@@ -226,3 +226,22 @@ footer {
     flex-direction: column;
   }
 }
+.project-insights {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.project-insights h4 {
+  color: #c0005a;
+  margin-bottom: 10px;
+}
+
+.project-insights ul {
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.project-insights li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
