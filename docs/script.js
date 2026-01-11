@@ -1,29 +1,48 @@
-/* ================= SIMPLE LOGIN (DEMO PURPOSE) ================= */
+/* ======================================================
+   SIMPLE LOGIN (DEMO PURPOSE)
+   ====================================================== */
 function login() {
-  const name =
-    document.getElementById("username").value.trim() || "Visitor";
+  const name = document.getElementById("username").value || "Visitor";
 
   alert(
     `Welcome, ${name}!\n\n` +
-      `Welcome to my professional portfolio.\n` +
-      `Feel free to explore my projects and skills.`
+    `Welcome to my professional portfolio.\n` +
+    `I hope you enjoy exploring my work.`
   );
 
   document.getElementById("login-screen").style.display = "none";
   document.getElementById("site-content").style.display = "block";
+
+  initializeSite();
 }
 
-/* ================= SKILLS DATA ================= */
-const skills = [
-  { name: "Python", level: 85 },
-  { name: "SQL", level: 80 },
-  { name: "Pandas", level: 85 },
-  { name: "Data Visualization", level: 75 },
-  { name: "Git & GitHub", level: 70 }
-];
+/* ======================================================
+   INITIALIZE SITE AFTER LOGIN
+   ====================================================== */
+function initializeSite() {
+  loadData();
+  initParticles();
+}
 
-/* ================= LOAD SKILLS ================= */
-function loadSkills() {
+/* ======================================================
+   LOAD DATA FROM JSON
+   ====================================================== */
+function loadData() {
+  fetch("data.json")
+    .then(response => response.json())
+    .then(data => {
+      loadSkills(data.skills);
+      loadProjects(data.projects);
+    })
+    .catch(error => {
+      console.error("Error loading data.json:", error);
+    });
+}
+
+/* ======================================================
+   SKILLS
+   ====================================================== */
+function loadSkills(skills) {
   const container = document.querySelector(".skills-container");
   if (!container) return;
 
@@ -33,25 +52,74 @@ function loadSkills() {
     const card = document.createElement("div");
     card.className = "skill-card";
 
-    card.innerHTML = `
-      <div class="skill-name">${skill.name}</div>
-      <div class="skill-bar">
-        <div class="skill-level"></div>
-      </div>
-    `;
+    const name = document.createElement("div");
+    name.className = "skill-name";
+    name.textContent = skill.name;
 
+    const bar = document.createElement("div");
+    bar.className = "skill-bar";
+
+    const level = document.createElement("div");
+    level.className = "skill-level";
+
+    bar.appendChild(level);
+    card.appendChild(name);
+    card.appendChild(bar);
     container.appendChild(card);
 
-    const levelBar = card.querySelector(".skill-level");
+    // Animate skill bar
     setTimeout(() => {
-      levelBar.style.width = skill.level + "%";
+      level.style.width = skill.level + "%";
     }, 300);
   });
 }
 
-document.addEventListener("DOMContentLoaded", loadSkills);
+/* ======================================================
+   PROJECTS
+   ====================================================== */
+function loadProjects(projects) {
+  const container = document.querySelector(".projects-container");
+  if (!container) return;
 
-/* ================= FLOATING PINK PARTICLES ================= */
+  container.innerHTML = "";
+
+  const modal = document.getElementById("modal");
+  const modalTitle = document.getElementById("modal-title");
+  const modalCategory = document.getElementById("modal-category");
+  const modalDescription = document.getElementById("modal-description");
+  const closeModal = document.getElementById("close-modal");
+
+  projects.forEach(project => {
+    const card = document.createElement("div");
+    card.className = "project-card";
+
+    card.innerHTML = `
+      <h3>${project.title}</h3>
+      <p>${project.description}</p>
+    `;
+
+    card.addEventListener("click", () => {
+      modal.style.display = "flex";
+      modalTitle.textContent = project.title;
+      modalCategory.textContent = "Category: " + project.category;
+      modalDescription.textContent = project.description;
+    });
+
+    container.appendChild(card);
+  });
+
+  closeModal.onclick = () => (modal.style.display = "none");
+
+  modal.onclick = event => {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  };
+}
+
+/* ======================================================
+   PARTICLES BACKGROUND
+   ====================================================== */
 const canvas = document.getElementById("particles");
 const ctx = canvas.getContext("2d");
 
@@ -79,8 +147,8 @@ class Particle {
     this.x += this.speedX;
     this.y += this.speedY;
 
-    if (this.x <= 0 || this.x >= canvas.width) this.speedX *= -1;
-    if (this.y <= 0 || this.y >= canvas.height) this.speedY *= -1;
+    if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+    if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
   }
 
   draw() {
@@ -96,16 +164,16 @@ function initParticles() {
   for (let i = 0; i < 100; i++) {
     particles.push(new Particle());
   }
+  animateParticles();
 }
 
 function animateParticles() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  particles.forEach(p => {
-    p.move();
-    p.draw();
+
+  particles.forEach(particle => {
+    particle.move();
+    particle.draw();
   });
+
   requestAnimationFrame(animateParticles);
 }
-
-initParticles();
-animateParticles();

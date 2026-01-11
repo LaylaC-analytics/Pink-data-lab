@@ -1,25 +1,33 @@
 {
   "skills": [
-    {"name": "Power BI", "level": 90},
-    {"name": "Excel Avançado", "level": 85},
-    {"name": "Figma", "level": 80},
-    {"name": "Desenvolvimento Web", "level": 75}
+    { "name": "HTML", "level": 100 },
+    { "name": "CSS", "level": 100 },
+    { "name": "JavaScript", "level": 85 },
+    { "name": "Node.js", "level": 75 },
+
+    { "name": "SQL Server", "level": 85 },
+    { "name": "MySQL", "level": 80 },
+
+    { "name": "Power BI", "level": 100 },
+    { "name": "Data Analysis", "level": 80 },
+    { "name": "Data Visualization", "level": 80 }
   ],
+
   "projects": [
     {
-      "title": "Dashboard de Vendas",
-      "description": "Dashboard interativo mostrando vendas por região e produto.",
-      "category": "Dados"
+      "title": "Pink Data Insights",
+      "description": "End-to-end data analysis project focused on sales data, including exploratory data analysis, feature engineering, SQL queries using SQLite, and business-driven insights.",
+      "category": "Data Analytics"
     },
     {
-      "title": "App Web",
-      "description": "Aplicativo web simples para gerenciamento de tarefas.",
-      "category": "Desenvolvimento"
+      "title": "Sales Dashboard",
+      "description": "Interactive dashboard displaying sales performance by region and product, enabling data-driven decision making.",
+      "category": "Business Intelligence"
     },
     {
-      "title": "Design UI/UX",
-      "description": "Criação de protótipos e interfaces atraentes.",
-      "category": "Design"
+      "title": "Web Application",
+      "description": "Simple web application developed with HTML, CSS, JavaScript, and Node.js for task management and user interaction.",
+      "category": "Web Development"
     }
   ]
 }
