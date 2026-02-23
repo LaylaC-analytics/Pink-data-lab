@@ -1,34 +1,60 @@
-Pink Data Lab
-About
+🌸 Pink Data Lab
 
-Pink Data Lab is my personal portfolio website, created to present my professional journey, projects, and transition into the data analytics field.
+Pink Data Lab is my personal portfolio website, designed to showcase my professional journey, technical projects, and transition into the field of Data Analytics.
 
-This space combines technology, creativity, and analytical thinking, reflecting both my technical background and my personal identity.
+This space combines technology, analytical thinking, and creativity — reflecting both my technical skills and personal identity.
 
-Purpose
+🎯 Purpose
 
-The purpose of Pink Data Lab is to:
+Pink Data Lab was created to:
 
-Present my professional profile in a clear and accessible way
+Present my professional profile in a structured and accessible way
 
 Showcase selected projects in data analytics and web development
 
-Serve as a central hub connecting my work, studies, and online presence
+Demonstrate practical application of Python, SQL, and data visualization
 
-Visual Identity
+Serve as a central hub connecting my work, studies, and professional presence
+
+🎨 Visual Identity
 
 The visual identity of Pink Data Lab is intentional.
 
 Pink represents confidence, sensitivity, and strength — values that align with my approach to technology and data.
-In a field traditionally dominated by neutral tones, this project embraces color as a way to express authenticity while maintaining professionalism.
 
-Featured Projects
+In a field traditionally dominated by neutral tones, this project embraces color as a symbol of authenticity while maintaining clarity, structure, and professionalism.
 
-Pink Data Insights
-End-to-end data analytics project using Python and SQL
-🔗 https://github.com/LaylaC-analytics/pink-data-insights
+The UI design prioritizes:
 
-Technologies
+Readability
+
+Clean layout
+
+Data-driven storytelling
+
+Interactive user experience
+
+📊 Featured Projects
+🌸 Pink Data Insights
+
+End-to-end data analytics project using Python (Pandas) and SQL (SQLite).
+
+This project includes:
+
+Data cleaning and preprocessing
+
+Exploratory Data Analysis (EDA)
+
+Revenue aggregation queries
+
+Business insight generation
+
+Interactive dashboard visualization using JSON and Chart.js
+
+🔗 GitHub Repository:
+https://github.com/LaylaC-analytics/pink-data-insights
+
+💻 Technologies Used
 
 HTML
 
@@ -36,12 +62,20 @@ CSS
 
 JavaScript
 
+Python (Pandas)
+
+SQL (SQLite)
+
+Chart.js
+
+Git & GitHub
+
 GitHub Pages
 
-Live Website
+🌐 Live Website
 
 🔗 https://laylac-analytics.github.io/pink-data-lab
 
-Author
+👩🏻‍💻 Author
 
-Personal portfolio developed for professional presentation and continuous growth.
+Developed as part of my transition into Data Analytics, focusing on building real-world analytical projects that combine technical rigor and business insight.

@@ -6,37 +6,20 @@
   <title>Pink Data Lab | Data Analytics Portfolio</title>
 
   <!-- Google Font -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
 
   <!-- CSS -->
-<link rel="stylesheet" href="style.css">
-
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- ================= PARTICLES BACKGROUND ================= -->
+<!-- PARTICLES BACKGROUND -->
 <canvas id="particles"></canvas>
 
-<!-- ================= LOGIN ================= -->
-<div id="login-screen">
-  <form class="login-box" onsubmit="login(); return false;">
-    <h2>Welcome</h2>
-    <p>Enter to explore my data portfolio</p>
+<div id="site-content">
 
-    <input type="text" id="username" placeholder="Your name" />
-    <input type="password" value="123@" readonly />
-
-    <button type="submit">Enter</button>
-  </form>
-</div>
-
-<!-- ================= SITE CONTENT ================= -->
-<div id="site-content" style="display:none;">
-
-  <!-- ================= HEADER ================= -->
+  <!-- HEADER -->
   <header>
     <h1>Pink Data Lab</h1>
     <nav>
@@ -48,7 +31,7 @@
     </nav>
   </header>
 
-  <!-- ================= ABOUT ================= -->
+  <!-- ABOUT -->
   <section id="about">
     <h2>About Me</h2>
 
@@ -56,98 +39,84 @@
       <img src="assets/My_image.jfif" alt="Profile photo" class="profile-photo" />
 
       <p>
-        I am a data-focused professional driven by curiosity, creativity, and
-        analytical thinking. I believe data is not just about numbers, but
-        about stories, decisions, and real-world impact.
+        I am a data-focused professional driven by analytical thinking and curiosity.
+        I transform raw data into structured insights that support business decisions.
         <br /><br />
-        The pink visual identity of this website is intentional. It represents
-        confidence, authenticity, and the courage to bring creativity into
-        technical environments.
-        <br /><br />
-        My goal is to grow as a Data Analyst, transforming complex datasets
-        into clear, actionable insights using Python, SQL, and data
-        visualization.
+        My work combines Python, SQL, and data visualization to deliver clear,
+        actionable analysis.
       </p>
     </div>
   </section>
 
-  <!-- ================= SKILLS ================= -->
+  <!-- SKILLS -->
   <section id="skills">
-    <h2>Skills</h2>
+    <h2>Technical Skills</h2>
     <div class="skills-container"></div>
   </section>
 
-  <!-- ================= PROJECTS ================= -->
+  <!-- PROJECTS -->
   <section id="projects">
-    <h2>Data Projects</h2>
+    <h2>Projects</h2>
 
     <div class="project-card">
       <h3>Pink Data Insights</h3>
-
-<div class="project-insights">
-
-  <h4>Key Insights</h4>
-  
-  <ul>
-    <li>Identified customer segments with higher purchase frequency using SQL queries.</li>
-    <li>Revenue concentration observed in a small group of products, indicating potential optimization opportunities.</li>
-    <li>Seasonality patterns detected, with sales peaks during specific periods.</li>
-    <li>Data cleaning and transformation significantly improved analysis accuracy.</li>
-  </ul>
-
-  <p><strong>Tools:</strong> Python, SQL, Pandas, Jupyter Notebook</p>
-
       <p>
-        End-to-end data analysis project focused on sales data.  
-        The project includes exploratory data analysis, feature engineering,
-        SQL analysis with SQLite, and business-driven insights.
+        End-to-end sales data analysis project developed using Python and SQL.
+        The project includes data cleaning, exploratory data analysis (EDA),
+        feature engineering, SQLite queries, and extraction of actionable
+        business insights.
       </p>
 
-      <p>
-        <strong>Technologies:</strong>
-        Python, Pandas, SQL, SQLite, Matplotlib
-      </p>
+      <ul>
+        <li>Data cleaning and preprocessing</li>
+        <li>Exploratory Data Analysis (EDA)</li>
+        <li>Feature engineering</li>
+        <li>SQL queries using SQLite</li>
+        <li>Business insights and recommendations</li>
+      </ul>
 
-      <a
-        href="https://github.com/LaylaC-analytics/pink-data-insights"
-        target="_blank"
-        class="project-link"
-      >
-        View project on GitHub →
-      </a>
+      <!-- BOTÃO PARA PÁGINA DO PROJETO -->
+      <a href="project_insights.html" class="btn">View Full Project</a>
     </div>
+
+    <div class="project-card">
+      <h3>Pink Data Lab – Portfolio Website</h3>
+      <p>
+        Interactive portfolio website built with HTML, CSS, and JavaScript,
+        featuring dynamic content rendering through structured JSON data.
+      </p>
+      <ul>
+        <li>Responsive layout with HTML and CSS</li>
+        <li>Dynamic content loading with JavaScript</li>
+        <li>Structured JSON integration</li>
+        <li>Custom UI design</li>
+      </ul>
+    </div>
+
   </section>
 
-  <!-- ================= CONTACT ================= -->
+  <!-- CONTACT -->
   <section id="contact">
     <h2>Contact</h2>
 
-    <p>
-      Email:
-      <a href="mailto:laylacos21@gmail.com">laylacos21@gmail.com</a>
-    </p>
+    <p>Email: <a href="mailto:laylacos21@gmail.com">laylacos21@gmail.com</a></p>
 
     <p>
       LinkedIn:
-      <a
-        href="https://www.linkedin.com/in/layla-costa-054b54231/"
-        target="_blank"
-      >
+      <a href="https://www.linkedin.com/in/layla-costa-054b54231/" target="_blank">
         linkedin.com/in/layla-costa
       </a>
     </p>
   </section>
 
-  <!-- ================= FOOTER ================= -->
+  <!-- FOOTER -->
   <footer>
     <p>© 2026 Pink Data Lab. All rights reserved.</p>
   </footer>
 
 </div>
 
-<!-- ================= SCRIPT ================= -->
 <script src="script.js"></script>
-
 
 </body>
 </html>

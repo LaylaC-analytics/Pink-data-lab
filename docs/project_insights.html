@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pink Data Insights | Pink Data Lab</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- PARTICLES BACKGROUND (opcional, pode remover se quiser mais clean) -->
+<canvas id="particles"></canvas>
+
+<div id="site-content">
+
+  <!-- HEADER -->
+  <header>
+    <h1>
+      <a href="index.html" class="logo-link">Pink Data Lab</a>
+    </h1>
+    <nav>
+      <a href="index.html#about">About</a>
+      <a href="index.html#skills">Skills</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="https://github.com/LaylaC-analytics" target="_blank">GitHub</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="project-hero">
+    <h2>Pink Data Insights Dashboard</h2>
+    <p>
+      Interactive sales analytics dashboard built with Python (Pandas), SQL (SQLite),
+      and dynamic data visualization using JSON and Chart.js.
+      This project demonstrates revenue aggregation, exploratory data analysis (EDA),
+      and business-oriented insights generation.
+    </p>
+  </section>
+
+  <!-- DASHBOARD -->
+  <section class="dashboard">
+
+    <!-- KPI CARD -->
+    <div class="kpi-card">
+      <h3>Total Revenue</h3>
+      <p id="total-revenue"></p>
+    </div>
+
+    <!-- PRODUCT CHART -->
+    <div class="chart-card">
+      <h3>Revenue by Product</h3>
+      <canvas id="productChart"></canvas>
+    </div>
+
+    <!-- REGION CHART -->
+    <div class="chart-card">
+      <h3>Revenue by Region</h3>
+      <canvas id="regionChart"></canvas>
+    </div>
+
+    <div class="dashboard-controls">
+  <select id="regionFilter">
+    <option value="all">All Regions</option>
+  </select>
+
+  <button id="toggleChart">Switch Chart Type</button>
+</div> 
+  </section>
+
+  <!-- INSIGHTS -->
+  <section class="insight-section">
+    <h2>Key Business Insights</h2>
+    <ul id="insight-list" class="insight-list"></ul>
+  </section>
+
+  <!-- BACK BUTTON -->
+  <div class="back-button">
+    <a href="index.html" class="btn">← Back to Portfolio</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Pink Data Lab. All rights reserved.</p>
+  </footer>
+
+</div>
+
+<!-- SCRIPTS -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+<script src="dashboard.js"></script>
+
+
+</body>
+</html>

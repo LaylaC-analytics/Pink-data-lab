@@ -1,33 +1,51 @@
 {
   "skills": [
-    { "name": "HTML", "level": 100 },
-    { "name": "CSS", "level": 100 },
-    { "name": "JavaScript", "level": 85 },
-    { "name": "Node.js", "level": 75 },
-
-    { "name": "SQL Server", "level": 85 },
-    { "name": "MySQL", "level": 80 },
-
+    { "name": "HTML & CSS", "level": 90 },
+    { "name": "JavaScript", "level": 80 },
+    { "name": "SQL (SQLite, MySQL, SQLServer)", "level": 85 },
+    { "name": "Python (Pandas)", "level": 85 },
+    { "name": "Data Analysis", "level": 85 },
+    { "name": "Data Visualization", "level": 80 },
     { "name": "Power BI", "level": 100 },
-    { "name": "Data Analysis", "level": 80 },
-    { "name": "Data Visualization", "level": 80 }
+    { "name": "CSA - Certified System Administrator", "level": 75 }
   ],
 
   "projects": [
     {
       "title": "Pink Data Insights",
-      "description": "End-to-end data analysis project focused on sales data, including exploratory data analysis, feature engineering, SQL queries using SQLite, and business-driven insights.",
-      "category": "Data Analytics"
+      "description": "Sales data analysis project using Python (Pandas) and SQL (SQLite), including exploratory data analysis (EDA), revenue aggregation, and business insights.",
+      "category": "Data Analytics",
+      "link": "project_insights.html"
+ 
     },
     {
-      "title": "Sales Dashboard",
-      "description": "Interactive dashboard displaying sales performance by region and product, enabling data-driven decision making.",
-      "category": "Business Intelligence"
-    },
-    {
-      "title": "Web Application",
-      "description": "Simple web application developed with HTML, CSS, JavaScript, and Node.js for task management and user interaction.",
+      "title": "Portfolio Website",
+      "description": "Interactive front-end portfolio built with HTML, CSS, and JavaScript, featuring dynamic content rendering via structured JSON.",
       "category": "Web Development"
     }
-  ]
+  ],
+
+  "pink_data_insights": {
+    "total_revenue": 6850,
+
+    "revenue_by_product": [
+      { "product": "Product A", "value": 3400 },
+      { "product": "Product B", "value": 2640 },
+      { "product": "Product C", "value": 810 }
+    ],
+
+    "revenue_by_region": [
+      { "region": "North", "value": 2800 },
+      { "region": "West", "value": 2040 },
+      { "region": "South", "value": 1380 },
+      { "region": "East", "value": 630 }
+    ],
+
+    "insights": [
+      "Product A is the primary revenue driver, representing nearly 50% of total sales.",
+      "The North region leads overall revenue performance.",
+      "Product C underperforms compared to other products.",
+      "SQL aggregation enables efficient multi-dimensional analysis across regions and products."
+    ]
+  }
 }
