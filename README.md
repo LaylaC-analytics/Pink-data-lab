@@ -74,7 +74,7 @@ GitHub Pages
 
 🌐 Live Website
 
-🔗 https://laylac-analytics.github.io/pink-data-lab
+🔗  https://laylac-analytics.github.io/Pink-data-lab/
 
 👩🏻‍💻 Author
 
